@@ -2146,6 +2146,12 @@ header ul, header li, footer ul, footer li {
     font-size: 2.5em;
   }
 }
+.preloader .animation-preloader .txt-loading .letters-loading[data-text-preloader=" "]::before {
+  content: "\00a0"; /* Código Unicode para un espacio no rompible */
+}
+.preloader .animation-preloader .txt-loading .letters-loading {
+  margin-right: 5px; /* Puedes ajustar el valor según sea necesario */
+}
 .preloader .animation-preloader .txt-loading .letters-loading {
   color: #B69D74;
   position: relative;

@@ -1,104 +1,348 @@
 /*
-Template: LAWGIST – Attorney & Lawyers HTML Template
-Author: RRDevs
-Author URI: https://themeforest.net/user/rrdevs
-Description: Attorney & Lawyers HTML Template
-Version: 1.0.0
+==============================================
+  Centro Juridico Cerda — Brand Style Override
+  Paleta: #003366 | #b4b4b4 | #ffffff
+  Tipografia: Open Sans (cuerpo) | Times New Roman (titulos)
+==============================================
 */
 
-/*
-=================================
-|***    Table of contents:   ***|
-=================================
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap");
 
-Main Style file-> assets/css/style.css 
+/* =============================================
+   1. TIPOGRAFIA
+   ============================================= */
 
-All the SCSS File in SCSS Folder of Assets Folder. You can read the doc file also for better understand.
+body,
+p, li, span, td, label, input, textarea,
+select, .form-control, small, .small,
+.single_content p, .blog_date a,
+.top_head_left ul li a,
+.top_head_right ul li,
+.footer_bottom_widget span,
+.single_footer_widget p,
+.content_top p, .right_button .content_top p {
+  font-family: "Open Sans", sans-serif !important;
+}
 
-// BASIC 
-@import 'basic';
+h1, h2, h3, h4, h5, h6,
+.section-title h2,
+.section-title h3,
+.section-title h6,
+.hero-contents h1,
+.hero-contents h6,
+.single_service_card h4,
+.single_team_item .content h4,
+.single_blog_widget .content h4,
+.single_funfact_items h3,
+.single_funfact_items h4,
+.single_funfact_items h6,
+.single_footer_widget h4,
+.right_button h5,
+.content_top h5,
+.about_funfact h4,
+.about_funfact h2,
+.single_support .content h5,
+.single_our_item_2 .content h4,
+.single_our_item .section-title h2 {
+  font-family: "Times New Roman", Times, serif !important;
+}
 
-// MIXIN
-@import 'variables';
+/* =============================================
+   2. COLORES PRIMARIOS — Azul marino #003366
+      Reemplaza: #B69D74 (dorado), #C8242F (rojo)
+      #033A5B (azul oscuro), #2C3B65 (azul)
+   ============================================= */
 
-// TYPOGRAPHY
-@import 'typography';
+/* --- Preloader --- */
+.letters-loading::before { color: #003366 !important; }
+.spinner { border-top-color: #003366 !important; }
+.loader-section .bg { background-color: #003366 !important; }
 
-// MIX
-@import 'mix';
+/* --- Barra superior del header --- */
+.header-wrap.header_1 {
+  border-bottom: 2px solid #003366 !important;
+}
+.top_head_left ul li i { color: #003366 !important; }
+.top_head_right ul li a { color: #003366 !important; }
+.top_head_right ul li i { color: #003366 !important; }
 
-// HELPER
-@import 'helper';
+/* --- Navegacion --- */
+.main-menu > ul > li > a:hover,
+.main-menu > ul > li.active > a,
+.secend_menu > ul > li > a:hover {
+  color: #003366 !important;
+}
+.main-menu > ul > li > a::before,
+.secend_menu > ul > li > a::before {
+  background: linear-gradient(90deg, #003366 0%, rgba(255,255,255,0) 100%) !important;
+}
+.sub-menu li a:hover { color: #003366 !important; }
+.main_menu_widget { background-color: #003366 !important; }
+.main-menu > ul > li > a,
+.secend_menu > ul > li > a { color: #ffffff !important; }
+.main-menu > ul > li > a:hover,
+.secend_menu > ul > li > a:hover { color: #b4b4b4 !important; }
 
-// ICON FONTS
-@import 'icon';
+/* Boton derecho del header (telefono) */
+.right_button { background-color: #002244 !important; }
+.right_button:hover { background-color: #004080 !important; }
+.right_button .right_icon { background-color: #003366 !important; }
+.right_button .right_icon i { color: #ffffff !important; }
 
-// ANIMATION
-@import 'animation';
+/* Mobile nav */
+.mobile-nav { background-color: #003366 !important; }
 
-// Button 
-@import 'btn';
+/* --- Botones principales .theme-btn --- */
+.theme-btn {
+  background-color: #003366 !important;
+  background-image: none !important;
+  border-color: #003366 !important;
+  color: #ffffff !important;
+}
+.theme-btn:hover {
+  background-color: #004080 !important;
+  border-color: #004080 !important;
+  color: #ffffff !important;
+}
+.theme-btn.theme-border {
+  background-color: transparent !important;
+  border: 2px solid #003366 !important;
+  color: #003366 !important;
+}
+.theme-btn.theme-border:hover {
+  background-color: #003366 !important;
+  color: #ffffff !important;
+}
 
-// Variables 
-@import 'variables';
+/* --- Boton texto .btnd --- */
+a.btnd, .btnd {
+  color: #003366 !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+a.btnd::before,
+a.btnd i { color: #003366 !important; }
+a.btnd:hover { color: #004080 !important; }
 
-// Preloader 
-@import 'preloader';
+/* --- Secciones de titulos --- */
+.section-title h6 { color: #003366 !important; }
+.section-title h6::before,
+.section-title h6::after {
+  background: linear-gradient(90deg, #003366 0%, rgba(255,255,255,0) 100%) !important;
+}
+.section-title .section_2 h6 { color: #003366 !important; }
 
-/* ----------------------------------
-    Template Section Styles
- ------------------------------------*/
+/* --- Hero banner --- */
+.hero_wrapper .hero-contents h6 { color: #b4b4b4 !important; }
+.hero_wrapper .number { color: #b4b4b4 !important; }
 
- /* // Menu - Header Section 
- @import 'header';
- 
- // Hero Slide - Section 
- @import 'hero';
- 
- // Section Title - Heading 
- @import 'section';
- 
- // About - Section 
- @import 'about';
- 
- // Features - Section 
- @import 'features';
- 
- // services - Section 
- @import 'services';
- 
- // testimonial - Section 
- @import 'testimonial';
- 
- // Portfolio - Cases - Section 
- @import 'project';
- 
- // Price Table - Section 
- @import 'price';
- 
- // Call To Action - Section 
- @import 'cta';
- 
- // team - Section 
- @import 'team';
- 
- // funfact - Section 
- @import 'funfact';
- 
- // Download - Section 
- @import 'carousel';
- 
- // FAQ - Section 
- @import 'faq';
- 
- // Blog - Section 
- @import 'blog';
- 
- // Contact Us - Section 
- @import 'contact';
- 
- // footer - Section 
- @import 'footer'; */
+/* --- Feature items (3 tarjetas debajo del hero) --- */
+.single_feature_item { border-top: 3px solid #003366 !important; }
+.single_feature_item .single_feature_widget .single_icon {
+  background-color: #003366 !important;
+}
+.single_feature_item h4 { color: #003366 !important; }
 
+/* --- Funfact / contadores --- */
+.funfact_wrapper { background-color: #003366 !important; }
+.single_funfact_items h3,
+.single_funfact_items h4,
+.single_funfact_items h6 { color: #ffffff !important; }
+.single_funfact_items h3 .counter { color: #ffffff !important; }
 
+/* --- Seccion About --- */
+.about_wrapper .modal_funfact {
+  background-color: #003366 !important;
+}
+.about_funfact h2, .about_funfact h4 { color: #ffffff !important; }
+.about_content ul li::before { background-color: #003366 !important; }
+.about_content ul li::after  { background-color: #003366 !important; }
 
+/* --- Servicios --- */
+.single_service_card {
+  border-bottom: 3px solid #003366 !important;
+}
+.single_service_card h4 { color: #003366 !important; }
+.single_service_card:hover { background-color: #003366 !important; }
+.single_service_card:hover h4 { color: #ffffff !important; }
+.single_service_card:hover p  { color: #e0e0e0 !important; }
+.single_service_card:hover .btnd { color: #b4b4b4 !important; }
+
+/* --- Por que elegirnos --- */
+.single_support .icon { background-color: #003366 !important; }
+.single_support .icon img { filter: brightness(0) invert(1) !important; }
+.single_funfact.single_funfact_items { background-color: #003366 !important; }
+.single_funfact .single_funfact_items h1,
+.single_funfact .single_funfact_items h3 { color: #ffffff !important; }
+
+/* --- Testimoniales --- */
+.left_button { background-color: #003366 !important; }
+.left_button .icon { background-color: #002244 !important; }
+.left_button:hover { background-color: #004080 !important; }
+
+/* --- Equipo / Abogados --- */
+.single_team_item .content {
+  border-top: 3px solid #003366 !important;
+}
+.single_team_item:hover .content {
+  background-color: #003366 !important;
+}
+.single_team_item:hover .content h4 { color: #ffffff !important; }
+.single_team_item:hover .content p  { color: #e0e0e0 !important; }
+.single_team_item:hover .btnd       { color: #b4b4b4 !important; }
+
+/* --- CTA Section --- */
+.cta_wrapper { position: relative; }
+.cta_wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 51, 102, 0.75) !important;
+}
+.cta_wrapper .row { position: relative; z-index: 2; }
+
+/* --- Blog --- */
+.blog_date a { color: #003366 !important; }
+.single_blog_widget .content h4:hover { color: #003366 !important; }
+.author_info { background-color: #003366 !important; }
+
+/* --- Contacto --- */
+.contact_form .section-title h6 { color: #003366 !important; }
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: #003366 !important;
+  box-shadow: 0 0 0 2px rgba(0,51,102,0.15) !important;
+}
+
+/* --- Casos / Proyectos --- */
+.single_our_item_2 .items_img span {
+  background-color: #003366 !important;
+}
+
+/* --- Página hero-3 (sub-páginas) --- */
+.hero_wrapper.hero-3 { background-color: #002244 !important; }
+.hero_wrapper.hero-3 .hero-contents h1 { color: #ffffff !important; }
+.hero_wrapper.hero-3 .hero-contents span a { color: #b4b4b4 !important; }
+.hero_wrapper.hero-3 .hero-contents span a:hover { color: #ffffff !important; }
+
+/* --- Barra lateral de detalles de abogados --- */
+.single_service_details_right.single_service-1 {
+  border: 2px solid #003366 !important;
+}
+.single_service_details_right.single_service-2 ul li a:hover {
+  color: #003366 !important;
+}
+.single_service_details_right.single_service-2 ul li a::before {
+  background-color: #003366 !important;
+}
+
+/* Progress bars */
+.single_progress_bar span {
+  background-color: #003366 !important;
+}
+
+/* Social links */
+.social_link a {
+  background-color: #003366 !important;
+  color: #ffffff !important;
+}
+.social_link a:hover {
+  background-color: #004080 !important;
+}
+
+/* --- Footer --- */
+.footer_wrapper { background-color: #001a3a !important; }
+.single_footer_widget h4 {
+  color: #ffffff !important;
+  border-bottom: 2px solid #003366 !important;
+}
+.single_footer_link ul li a:hover { color: #b4b4b4 !important; }
+.single_footer_link ul li a::before { background-color: #b4b4b4 !important; }
+.single_address a:hover { color: #b4b4b4 !important; }
+.footer_wrapper hr { border-color: #003366 !important; }
+.newsletter_box button.theme-btn {
+  background-color: #003366 !important;
+}
+
+/* --- Scroll up button --- */
+#scrollUp {
+  background-color: #003366 !important;
+  color: #ffffff !important;
+}
+#scrollUp:hover { background-color: #004080 !important; }
+
+/* --- Team page button --- */
+.single_team_btn {
+  background-color: #003366 !important;
+}
+.single_team_btn span a { color: #ffffff !important; }
+
+/* =============================================
+   3. COLORES SECUNDARIOS — Gris #b4b4b4
+   ============================================= */
+
+/* Bordes sutiles y elementos neutros */
+.single_damages_content.attomeys_content ul li { border-bottom-color: #b4b4b4 !important; }
+.attomeys_content ul li strong { color: #003366 !important; }
+
+/* =============================================
+   4. TARJETAS DE EQUIPO — tamaño y proporcion
+   ============================================= */
+
+.team_wrapper .single_team_item .team_img {
+  overflow: hidden;
+  height: 340px;
+}
+.team_wrapper .single_team_item .team_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+.team_wrapper .single_team_item:hover .team_img img {
+  transform: scale(1.04);
+}
+
+/* =============================================
+   5. FOTO DE ABOGADO en paginas de detalle
+   ============================================= */
+
+.single_attomeys_img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 4px solid #003366;
+}
+.single_attomeys_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* =============================================
+   6. MISCELANIA
+   ============================================= */
+
+/* Separador de titulos de seccion */
+.section-title h6 img { filter: hue-rotate(200deg) saturate(2) brightness(0.6) !important; }
+
+/* Quitar el fondo del widget de logo en la parte superior */
+.logo_widget {
+  background-color: transparent !important;
+}
+
+/* Hover en enlaces generales */
+a:hover { color: #003366; }
+
+/* Badges SVG — mantener neutrales */
+.section-title h6 img,
+.about_element img,
+.feature_element img {
+  opacity: 0.85;
+}
+
+/* Form placeholders */
+::placeholder { color: #b4b4b4 !important; opacity: 1 !important; }

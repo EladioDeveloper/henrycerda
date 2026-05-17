@@ -12,6 +12,9 @@
    1. TIPOGRAFIA
    ============================================= */
 
+/* Quitar capitalize global de encabezados */
+h1, h2, h3, h4, h5, h6 { text-transform: none !important; }
+
 body,
 p, li, span, td, label, input, textarea,
 select, .form-control, small, .small,
@@ -60,11 +63,17 @@ h1, h2, h3, h4, h5, h6,
 
 /* --- Barra superior del header --- */
 .header-wrap.header_1 {
-  border-bottom: 2px solid #003366 !important;
+  border-bottom: none !important;
 }
-.top_head_left ul li i { color: #003366 !important; }
-.top_head_right ul li a { color: #003366 !important; }
-.top_head_right ul li i { color: #003366 !important; }
+.top_head_left ul li i { color: #ffffff !important; }
+.top_head_left ul li a { color: #ffffff !important; }
+.top_head_right ul li a { color: #ffffff !important; }
+.top_head_right ul li i { color: #ffffff !important; }
+
+/* Paginas, Contactos y textos del botón de teléfono */
+header.header_1 .main-menu_2 ul > li > a { color: #ffffff !important; }
+header.header_1 .right_button .content_top p { color: #ffffff !important; }
+header.header_1 .right_button .content_top h5 { color: #ffffff !important; }
 
 /* --- Navegacion --- */
 .main-menu > ul > li > a:hover,
@@ -77,16 +86,16 @@ h1, h2, h3, h4, h5, h6,
   background: linear-gradient(90deg, #003366 0%, rgba(255,255,255,0) 100%) !important;
 }
 .sub-menu li a:hover { color: #003366 !important; }
-.main_menu_widget { background-color: #003366 !important; }
+.main_menu_widget { background-color: #0A2E5D !important; }
 .main-menu > ul > li > a,
 .secend_menu > ul > li > a { color: #ffffff !important; }
 .main-menu > ul > li > a:hover,
 .secend_menu > ul > li > a:hover { color: #b4b4b4 !important; }
 
 /* Boton derecho del header (telefono) */
-.right_button { background-color: #002244 !important; }
-.right_button:hover { background-color: #004080 !important; }
-.right_button .right_icon { background-color: #003366 !important; }
+.right_button { background-color: transparent !important; }
+.right_button:hover { background-color: rgba(255,255,255,0.08) !important; }
+.right_button .right_icon { background-color: rgba(255,255,255,0.15) !important; }
 .right_button .right_icon i { color: #ffffff !important; }
 
 /* Mobile nav */
@@ -136,11 +145,17 @@ a.btnd:hover { color: #004080 !important; }
 .hero_wrapper .number { color: #b4b4b4 !important; }
 
 /* --- Feature items (3 tarjetas debajo del hero) --- */
-.single_feature_item { border-top: 3px solid #003366 !important; }
-.single_feature_item .single_feature_widget .single_icon {
-  background-color: #003366 !important;
+.single_feature_item { border-top: 3px solid #0A2E5D !important; height: 100%; }
+.single_feature_item .single_feature_widget {
+  background-color: #0A2E5D !important;
+  border-color: #0A2E5D !important;
+  height: 100%;
 }
-.single_feature_item h4 { color: #003366 !important; }
+.single_feature_item .single_feature_widget .single_icon {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+.single_feature_item h4 { color: #ffffff !important; }
+.feature_wrapper .row { align-items: stretch; }
 
 /* --- Funfact / contadores --- */
 .funfact_wrapper { background-color: #003366 !important; }
@@ -160,12 +175,17 @@ a.btnd:hover { color: #004080 !important; }
 /* --- Servicios --- */
 .single_service_card {
   border-bottom: 3px solid #003366 !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .single_service_card h4 { color: #003366 !important; }
+.single_service_card p { flex: 1; }
 .single_service_card:hover { background-color: #003366 !important; }
 .single_service_card:hover h4 { color: #ffffff !important; }
 .single_service_card:hover p  { color: #e0e0e0 !important; }
 .single_service_card:hover .btnd { color: #b4b4b4 !important; }
+.service_wrapper .row { align-items: stretch; }
 
 /* --- Por que elegirnos --- */
 .single_support .icon { background-color: #003366 !important; }
@@ -175,9 +195,17 @@ a.btnd:hover { color: #004080 !important; }
 .single_funfact .single_funfact_items h3 { color: #ffffff !important; }
 
 /* --- Testimoniales --- */
-.left_button { background-color: #003366 !important; }
-.left_button .icon { background-color: #002244 !important; }
-.left_button:hover { background-color: #004080 !important; }
+.left_button { background-color: #0A2E5D !important; }
+.left_button:hover { background-color: #0d3870 !important; }
+.left_button p { color: #c8d8f0 !important; }
+.left_button h4 { color: #ffffff !important; }
+.left_button .icon { background-color: rgba(255,255,255,0.12) !important; }
+.left_button .icon i { color: #ffffff !important; background-color: transparent !important; }
+
+/* Borde de tarjetas de testimonios alineado a línea gráfica */
+.single_testimonial_right .single_testimonial_item .single_content {
+  border-color: rgba(10, 46, 93, 0.2) !important;
+}
 
 /* --- Equipo / Abogados --- */
 .single_team_item .content {
@@ -189,6 +217,19 @@ a.btnd:hover { color: #004080 !important; }
 .single_team_item:hover .content h4 { color: #ffffff !important; }
 .single_team_item:hover .content p  { color: #e0e0e0 !important; }
 .single_team_item:hover .btnd       { color: #b4b4b4 !important; }
+
+/* --- Sección "Nuestra distinción" — textos y botón sobre fondo oscuro --- */
+.our_project_wrapper .section-title h6 { color: #ffffff !important; }
+.our_project_wrapper .section-title h6::before,
+.our_project_wrapper .section-title h6::after { background: rgba(255,255,255,0.4) !important; }
+.our_project_wrapper .theme-btn.theme-border {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+.our_project_wrapper .theme-btn.theme-border:hover {
+  background-color: #ffffff !important;
+  color: #0A2E5D !important;
+}
 
 /* --- CTA Section --- */
 .cta_wrapper { position: relative; }
@@ -334,6 +375,8 @@ a.btnd:hover { color: #004080 !important; }
   background-color: transparent !important;
 }
 
+
+
 /* Hover en enlaces generales */
 a:hover { color: #003366; }
 
@@ -346,3 +389,70 @@ a:hover { color: #003366; }
 
 /* Form placeholders */
 ::placeholder { color: #b4b4b4 !important; opacity: 1 !important; }
+
+/* =============================================
+   7. ÁREAS DE PRÁCTICA LEGAL
+   ============================================= */
+
+.practice-areas-section {
+  background-color: #0A2E5D;
+  padding: 70px 0 60px;
+}
+
+.practice-areas-header {
+  padding: 0 20px 48px;
+}
+
+.practice-areas-label {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b4b4b4;
+  margin-bottom: 12px;
+}
+
+.practice-areas-title {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.practice-area-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: default;
+  transition: background-color 0.25s ease;
+}
+
+.practice-area-item:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.practice-area-item i {
+  font-size: 32px;
+  color: #b4b4b4;
+  margin-bottom: 14px;
+  transition: color 0.25s ease;
+}
+
+.practice-area-item:hover i {
+  color: #ffffff;
+}
+
+.practice-area-item span {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+}

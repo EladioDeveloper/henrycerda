@@ -512,3 +512,78 @@ a:hover { color: #003366; }
   text-align: center;
   line-height: 1.4;
 }
+
+/* =============================================
+   9. TARJETAS DE SERVICIO — imagen 260px
+   ============================================= */
+
+.single_service_card .single_img {
+  height: 260px !important;
+}
+
+/* =============================================
+   10. POR QUÉ ELEGIRNOS — sección prominente
+   ============================================= */
+
+.why_chose_wrapper {
+  padding: 110px 0 !important;
+  background-color: #f5f7fa;
+}
+
+.why_chose_wrapper .section-title h2 {
+  font-size: 40px !important;
+  line-height: 1.2 !important;
+  color: #0A2E5D !important;
+  margin-bottom: 10px !important;
+}
+
+.why_chose_wrapper .single_chose_us > p {
+  font-size: 16px !important;
+  color: #444 !important;
+  line-height: 1.75 !important;
+  margin: 24px 0 32px !important;
+}
+
+.single_chose_us .single_support {
+  margin: 20px 0 !important;
+  padding: 22px 24px !important;
+  background-color: #ffffff !important;
+  border-left: 4px solid #003366 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 14px rgba(0, 51, 102, 0.08) !important;
+  transition: box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+.single_chose_us .single_support:hover {
+  box-shadow: 0 6px 24px rgba(0, 51, 102, 0.14) !important;
+  transform: translateY(-2px) !important;
+}
+
+.single_chose_us .single_support .content h5 {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  color: #003366 !important;
+  margin-bottom: 6px !important;
+  line-height: 1.2 !important;
+}
+
+.single_chose_us .single_support .content p {
+  font-size: 15px !important;
+  color: #555 !important;
+  margin: 0 !important;
+  line-height: 1.65 !important;
+}
+
+.single_chose_us .single_right {
+  height: 620px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18) !important;
+}
+
+.single_chose_us .single_funfact {
+  width: 220px !important;
+  height: 200px !important;
+  background-color: #003366 !important;
+  background-image: none !important;
+}

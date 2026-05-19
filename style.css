@@ -384,6 +384,25 @@ a.btnd:hover { color: #004080 !important; }
   background-color: transparent !important;
 }
 
+/* Nav compacto — reducir padding del main_menu_widget */
+.main_menu_widget {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  min-height: 0 !important;
+}
+.main-menu > ul > li > a,
+.secend_menu > ul > li > a,
+.secend_menu > li > a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.logo.d-none.d-xl-flex img {
+  max-height: 64px !important;
+}
+.logo.d-block.d-xl-none img {
+  max-height: 40px !important;
+}
+
 
 
 /* Hover en enlaces generales */

@@ -1,6 +1,6 @@
 /*
 ==============================================
-  Centro Juridico Cerda — Brand Style Override
+  Henry Cerda Asesores Legales Estratégicos — Brand Style Override
   Paleta: #003366 | #b4b4b4 | #ffffff
   Tipografia: Open Sans (cuerpo) | Times New Roman (titulos)
 ==============================================
@@ -133,12 +133,29 @@ a.btnd i { color: #003366 !important; }
 a.btnd:hover { color: #004080 !important; }
 
 /* --- Secciones de titulos --- */
-.section-title h6 { color: #003366 !important; }
+.section-title h6 {
+  color: #003366 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
 .section-title h6::before,
 .section-title h6::after {
   background: linear-gradient(90deg, #003366 0%, rgba(255,255,255,0) 100%) !important;
 }
-.section-title .section_2 h6 { color: #003366 !important; }
+
+/* Secciones con fondo oscuro/azul: restaurar texto blanco */
+.section-title.section_2 h6,
+.cta_wrapper .section-title h6,
+.team_wrapper_2 .section-title h6,
+.testimonial_wrapper .section-title h6 {
+  color: #ffffff !important;
+}
+.section-title.section_2 h6::after,
+.cta_wrapper .section-title h6::after,
+.team_wrapper_2 .section-title h6::after,
+.testimonial_wrapper .section-title h6::after {
+  background: linear-gradient(90deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 100%) !important;
+}
 
 /* --- Hero banner --- */
 .hero_wrapper .hero-contents h6 { color: #b4b4b4 !important; }
@@ -379,6 +396,15 @@ a.btnd:hover { color: #004080 !important; }
 /* Separador de titulos de seccion */
 .section-title h6 img { filter: hue-rotate(200deg) saturate(2) brightness(0.6) !important; }
 
+/* Badge blanco para secciones de fondo oscuro */
+.section-title.section_2 h6 img,
+.cta_wrapper .section-title h6 img,
+.team_wrapper_2 .section-title h6 img,
+.testimonial_wrapper .section-title h6 img {
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.9;
+}
+
 /* Quitar el fondo del widget de logo en la parte superior */
 .logo_widget {
   background-color: transparent !important;
@@ -547,7 +573,9 @@ a:hover { color: #003366; }
 .single_chose_us .single_support {
   margin: 20px 0 !important;
   padding: 22px 24px !important;
-  background-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
   border-left: 4px solid #003366 !important;
   border-radius: 6px !important;
   box-shadow: 0 3px 14px rgba(0, 51, 102, 0.08) !important;
@@ -555,6 +583,7 @@ a:hover { color: #003366; }
 }
 
 .single_chose_us .single_support:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
   box-shadow: 0 6px 24px rgba(0, 51, 102, 0.14) !important;
   transform: translateY(-2px) !important;
 }

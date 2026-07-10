@@ -186,8 +186,8 @@ a.btnd:hover { color: #004080 !important; }
   background-color: #003366 !important;
 }
 .about_funfact h2, .about_funfact h4 { color: #ffffff !important; }
-.about_content ul li::before { background-color: #003366 !important; }
-.about_content ul li::after  { background-color: #003366 !important; }
+.about_content ul li::before { background-color: transparent !important; }
+.about_content ul li::after  { background-color: transparent !important; }
 
 /* --- Servicios --- */
 .single_service_card {
@@ -225,6 +225,17 @@ a.btnd:hover { color: #004080 !important; }
 }
 
 /* --- Equipo / Abogados --- */
+/* Boton "Realice una cita" sobre el fondo oscuro de la seccion de equipo (about.html) */
+.team_wrapper.team_wrapper_2 .theme-btn {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #003366 !important;
+}
+.team_wrapper.team_wrapper_2 .theme-btn:hover {
+  background-color: #b4b4b4 !important;
+  border-color: #b4b4b4 !important;
+  color: #003366 !important;
+}
 .single_team_item .content {
   border-top: 3px solid #003366 !important;
 }
